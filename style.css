@@ -5,6 +5,8 @@
   --clr-greyish: hsl(84, 7%, 85%);
 }
 
+
+
 *,
 *::before,
 *::after {
@@ -61,6 +63,11 @@ button {
   font-size: 0.7em;
 }
 
+.links-list li:hover {
+  color: var(--clr-blue);
+  text-decoration: underline;
+}
+
 .header button {
   font-size: 0.7em;
   background-color: var(--clr-blue);
@@ -100,6 +107,11 @@ button {
   font-size: 0.9em;
   color: #767676;
   font-weight: 500;
+}
+
+.info a:hover {
+  color: var(--clr-blue);
+  text-decoration: underline;
 }
 
 .hero-link-wrapper {
@@ -156,5 +168,28 @@ button {
   }
   .hero-img-section {
     display: none;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-blue: hsl(193, 100%, 40%);
+
+    --clr-greyish: hsla(216, 100%, 76%, 0.096);
+
+  }
+
+  body {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .logo-text {
+    color: #fff;
+  }
+
+  .info p {
+    color: rgba(255, 255, 255, 0.623);
   }
 }
